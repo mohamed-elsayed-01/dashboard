@@ -1,0 +1,129 @@
+.tabs-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border: 1px solid #E7EAE9;
+    background: #FFF;
+
+}
+
+.tab-item {
+    position: relative;
+    color: #989EA7;
+    font-size: 13.496px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tab-item span {
+    line-height: 0px;
+}
+
+
+.tab-item:hover {
+    color: #e0592a;
+}
+
+.tab-item.active {
+    color: #e0592a;
+}
+
+.tab-item::after {
+    content: "";
+    position: absolute;
+    bottom: -21.5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #e0592a;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    /* smooth transition */
+}
+
+.tab-item.active::after {
+    width: 100%;
+}
+
+.tab-body-container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-left: 1px solid #E7EAE9;
+    border-right: 1px solid #E7EAE9;
+    border-bottom: 1px solid #E7EAE9;
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow-y: hidden;
+
+}
+
+.birthday-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side {
+    display: flex;
+    gap: 12px;
+
+}
+
+.left-side .info .name {
+    color: #2C2D65;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    display: block;
+}
+
+.left-side .info .job {
+    color: #989EA7;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    display: block;
+
+}
+
+.left-side .img-container {
+    min-width: 40px;
+    min-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.left-side .img-container img {
+    width: 100%;
+}
+
+.tab-body-container .line {
+    width: 100%;
+    height: 1px;
+    background-color: #E7EAE9;
+}
+
+.birthday-item .say-hbd-btn {
+    font-size: 13.496px;
+    font-style: normal;
+    font-weight: 500;
+    justify-content: end;
+    display: flex;
+    align-items: center;
+    color: #E0592A;
+    cursor: pointer;
+}
+
