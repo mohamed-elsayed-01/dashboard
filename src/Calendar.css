@@ -196,3 +196,13 @@
 .fc-day.selected-day .fc-daygrid-day-top {
     color: white !important;
 }
+
+.fc-daygrid-event {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.fc-daygrid-event .fc-event-main {
+    padding: 0 !important;
+}

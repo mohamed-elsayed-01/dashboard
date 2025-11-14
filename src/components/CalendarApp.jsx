@@ -5,16 +5,17 @@ import interactionPlugin from "@fullcalendar/interaction";
 import "../Calendar.css";
 import calenderIcon from "../assets/icons/calendar.png";
 import ScheduleModal from "./ScheduleModal";
+import renderEventContent from "./EventContent";
 
 const events = [
-  { title: "New Y..", date: "2025-07-01", color: "#d63384" },
-  { title: "Intern..", date: "2025-07-04", color: "#20c997" },
-  { title: "Break..", date: "2025-07-04", color: "#845ef7" },
-  { title: "The U..", date: "2025-07-09", color: "#82c91e" },
-  { title: "Missi..", date: "2025-07-21", color: "#51cf66" },
-  { title: "Camp..", date: "2025-07-24", color: "#74c0fc" },
-  { title: "Oper..", date: "2025-07-30", color: "#a9e34b" },
-  { title: "Initiati..", date: "2025-07-31", color: "#9775fa" },
+  { title: "New Y..", date: "2025-07-01", bgColor: "#ECFDF3", textColor: "#067647" },
+  { title: "Intern..", date: "2025-07-04", bgColor: "#ECFDF3", textColor: "#067647" },
+  { title: "Break..", date: "2025-07-04", bgColor: "#F9F5FF", textColor: "#6941C6" },
+  { title: "The U..", date: "2025-07-09", bgColor: "#F9F5FF", textColor: "#6941C6" },
+  { title: "Missi..", date: "2025-07-21", bgColor: "#FDF2FA", textColor: "#C11574" },
+  { title: "Camp..", date: "2025-07-24", bgColor: "#F9F5FF", textColor: "#6941C6" },
+  { title: "Oper..", date: "2025-07-30", bgColor: "#FDF2FA", textColor: "#C11574" },
+  { title: "Initiati..", date: "2025-07-31", bgColor: "#F9F5FF", textColor: "#6941C6" },
 ];
 
 export default function CalendarCard() {
@@ -97,6 +98,7 @@ export default function CalendarCard() {
             }}
             titleFormat={{ month: "long", year: "numeric" }}
             events={events}
+            eventContent={renderEventContent}
             height="auto"
             fixedWeekCount={false}
             dateClick={handleDateClick}

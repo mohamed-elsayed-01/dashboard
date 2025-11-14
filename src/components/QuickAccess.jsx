@@ -5,8 +5,15 @@ import timer from "../assets/cards/timer.png"
 import note from "../assets/cards/note.png"
 import lifebuoy from "../assets/cards/lifebuoy.png"
 import arrowRight from "../assets/icons/arrow-right.png"
+import { useState } from "react"
+import QuickAccessModal from "./QuickAccessModal"
 
 const QuickAccess = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleClose = () => {
+        setShowModal(false);
+    };
 
     const data = [
         {
@@ -36,48 +43,51 @@ const QuickAccess = () => {
     ]
 
     return (
-        <div className="big-card-container">
-            <div className="first-row">
-                <div className="right-side">
-                    <img src={flash} alt="lamb" />
-                    <span>Quick Access</span>
+        <>
+            <div className="big-card-container">
+                <div className="first-row">
+                    <div className="right-side">
+                        <img src={flash} alt="lamb" />
+                        <span>Quick Access</span>
+                    </div>
+                    <span onClick={() => setShowModal(true)} className="view-all">
+                        <img src={edit} alt="edit" />
+                        Edit
+                    </span>
                 </div>
-                <span className="view-all">
-                    <img src={edit} alt="edit" />
-                    Edit
-                </span>
-            </div>
-            <div className="big-card-second-row">
-                {
-                    data.map((a, index) => {
-                        const isLast = index === data.length - 1;
-                        return (
-                            <>
-                                <div key={index} className="item">
-                                    <div className="right-side">
-                                        <span className="num">
-                                            <img src={a.src} alt={a.title} />
-                                        </span>
-                                        <div className="titles">
-                                            <span className="title">
-                                                {a.title}
+                <div className="big-card-second-row">
+                    {
+                        data.map((a, index) => {
+                            const isLast = index === data.length - 1;
+                            return (
+                                <>
+                                    <div key={index} className="item">
+                                        <div className="right-side">
+                                            <span className="num">
+                                                <img src={a.src} alt={a.title} />
                                             </span>
-                                            <span className="desc">
-                                                {a.description}
-                                            </span>
+                                            <div className="titles">
+                                                <span className="title">
+                                                    {a.title}
+                                                </span>
+                                                <span className="desc">
+                                                    {a.description}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="left-side">
+                                            <img src={arrowRight} alt="arrow-right" width={20} height={20} />
                                         </div>
                                     </div>
-                                    <div className="left-side">
-                                        <img src={arrowRight} alt="arrow-right" width={20} height={20} />
-                                    </div>
-                                </div>
-                                {!isLast && <div className="line" />}
-                            </>
-                        )
-                    })
-                }
+                                    {!isLast && <div className="line" />}
+                                </>
+                            )
+                        })
+                    }
+                </div>
             </div>
-        </div>
+            <QuickAccessModal show={showModal} onClose={handleClose} />
+        </>
     )
 }
 
