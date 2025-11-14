@@ -47,12 +47,6 @@ const QuickAccessModal = ({ show, onClose }) => {
                     <span>Edit quick access</span>
                 </div>
             </Modal.Header>
-            <div className="draggers">
-                <img src={dragger} alt="dragger" />
-                <img src={dragger} alt="dragger" />
-                <img src={dragger} alt="dragger" />
-                <img src={dragger} alt="dragger" />
-            </div>
             <Modal.Body>
                 <div className="quick-aceess-modal-section">
                     <span className="title">Your Tools</span>
@@ -76,6 +70,7 @@ const QuickAccessModal = ({ show, onClose }) => {
                                             <div onClick={() => moveToShortcuts(t)} className="left-side">
                                                 <img src={minus} alt={t.id} />
                                             </div>
+                                            <img src={dragger} alt="dragger" className="dragger" />
                                         </div>
                                         {!isLast && <div className="line" />}
                                     </div>

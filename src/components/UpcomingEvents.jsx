@@ -27,6 +27,48 @@ const UpcomingEvents = () => {
             title: "Second Home Expo",
             location: "St. Regis, Abu Dhabi",
             src: event3
+        },
+        {
+            date: "13 Nov",
+            title: "Second Home Expo",
+            location: "Amsterdam, Netherlands",
+            src: event2
+        },
+        {
+            date: "26 Dec",
+            title: "Second Home Expo",
+            location: "St. Regis, Abu Dhabi",
+            src: event3
+        },
+        {
+            date: "13 Nov",
+            title: "Second Home Expo",
+            location: "Amsterdam, Netherlands",
+            src: event2
+        },
+        {
+            date: "26 Dec",
+            title: "Second Home Expo",
+            location: "St. Regis, Abu Dhabi",
+            src: event3
+        },
+        {
+            date: "26 Dec",
+            title: "Second Home Expo",
+            location: "St. Regis, Abu Dhabi",
+            src: event3
+        },
+        {
+            date: "13 Nov",
+            title: "Second Home Expo",
+            location: "Amsterdam, Netherlands",
+            src: event2
+        },
+        {
+            date: "26 Dec",
+            title: "Second Home Expo",
+            location: "St. Regis, Abu Dhabi",
+            src: event3
         }
     ];
 

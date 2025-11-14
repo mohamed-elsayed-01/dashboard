@@ -428,7 +428,6 @@
 }
 
 .app-container {
-  max-width: 1440px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -1067,7 +1066,7 @@
 
 
 .selection {
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 6px 28px 6px 10px;
@@ -1168,7 +1167,14 @@
   gap: 16px;
 }
 
+.item-container {
+  position: relative;
+}
+
+
+
 .items-container .item {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1217,7 +1223,14 @@
   gap: 16px;
 }
 
-.items-container .item-container .left-side{
+.items-container .item-container .dragger {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -22px;
+}
+
+.items-container .item-container .left-side {
   cursor: pointer;
 }
 
@@ -1267,5 +1280,8 @@
 
   .chart-container {
     grid-column: span 1;
+  }
+  .selection {
+    display: inline-flex;
   }
 }
